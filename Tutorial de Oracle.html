@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script src="Tutorial%20de%20Oracle%20Archivos/osd.js"></script><script src="Tutorial%20de%20Oracle%20Archivos/show_ads_impl.js" id="google_shimpl"></script><script async="" src="Tutorial%20de%20Oracle%20Archivos/analytics.js"></script><script async="" src="Tutorial%20de%20Oracle%20Archivos/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de Oracle</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content="oracle, programación, sql, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+es presentar los conceptos básicos de Oracle.">
+<meta name="author" content="Diego Moisset">
+<link rel="stylesheet" type="text/css" href="Tutorial%20de%20Oracle%20Archivos/principal.css">
+<link rel="stylesheet" type="text/css" href="Tutorial%20de%20Oracle%20Archivos/print.css" media="print">
+
+
+
+<script type="text/javascript" src="Tutorial%20de%20Oracle%20Archivos/principal.js"></script>
+
+<style type="text/css">
+<!--
+.Estilo3 {
+	color: #CC6633;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.cuerpotabla {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+
+}
+
+.cuerpotabla td {
+    padding:0.5rem;
+}
+
+.paginacion td{
+    padding:0.3rem;
+    font-size:1.7rem;
+    width:1.3rem;
+    text-align:center;
+}
+
+
+.paginas {
+  font-size:15px;
+}
+
+#datos td {
+ border-color:#000000;
+ padding:3px;
+}
+
+#tuto {
+ background-color: #c0cdf2;
+ margin: 0 auto;
+ width: 120px;
+ padding: 10px;
+ text-align: center;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;
+ -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+ -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+ box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+}
+
+
+
+#tuto a:link {
+  text-decoration: none;
+  color:#00f;
+}
+#tuto a:visited {
+  text-decoration: none;
+  color:#00f;  
+}
+
+
+-->
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 970px; height: 90px; } }
+
+</style>
+
+<link rel="preload" href="Tutorial%20de%20Oracle%20Archivos/integrator.js" as="script"><script type="text/javascript" src="Tutorial%20de%20Oracle%20Archivos/integrator.js"></script><link rel="preload" href="Tutorial%20de%20Oracle%20Archivos/integrator_002.js" as="script"><script type="text/javascript" src="Tutorial%20de%20Oracle%20Archivos/integrator_002.js"></script><link rel="preload" href="Tutorial%20de%20Oracle%20Archivos/show_ads_impl.js" as="script"></head>
+<body>
+<div id="container"><b class="rtop" style="background-color: rgb(255, 255, 255);"><b class="r1" style="background-color: rgb(231, 231, 231);"></b><b class="r2" style="background-color: rgb(231, 231, 231);"></b><b class="r3" style="background-color: rgb(231, 231, 231);"></b><b class="r4" style="background-color: rgb(231, 231, 231);"></b></b>
+<div id="header">
+<table width="100%">
+      <tbody><tr> 
+        <td width="45%">
+            <div style="float:left">
+            <h1 style="font-size:4em;text-shadow: 0px 0px 15px #000;margin-left:20px;margin-bottom:0em">Oracle Ya</h1>
+            <p style="font-size:1.1em;text-shadow: 0px 0px 3px #000;margin-left:20px;color:#fff">
+            Un curso de: <a style="text-shadow: 0px 0px 5px #ff0" href="http://www.tutorialesprogramacionya.com/" target="_blank">Tutoriales Ya</a></p>
+    </div>        
+</td>
+<td align="right">
+
+<div style="float:right">
+<div id="tuto">
+<strong> Tutoriales</strong>
+<br>
+<a href="http://www.tutorialesprogramacionya.com/visualbasicya/" target="_blank">VB.Net Ya</a><br>
+<a href="http://www.tutorialesprogramacionya.com/javaya" target="_blank">Java Ya</a><br>
+<a href="http://www.tutorialesprogramacionya.com/csharpya" target="_blank">C# Ya</a><br>
+<hr>
+<a href="http://www.tutorialesprogramacionya.com/colaboracion.html" target="_blank">Donar al sitio</a><br>
+</div>
+<br><span style="text-align:right"><g:plusone></g:plusone></span>
+<br>
+<a style="font-size:9px;margin-right:11px" href="https://www.tutorialesprogramacionya.com/politicas.htm">Políticas de privacidad.</a>
+</div>
+
+</td>
+
+</tr>
+</tbody></table>	
+
+</div>
+<!-- star of main content -->
+  <div id="content">
+    <p> <strong><em>Oracle Ya desde CERO</em></strong>. El tutorial está 
+      pensado para que pueda ser desarrollado por una persona que recién 
+      se inicia con SQL. El objetivo de este sitio es poder aprender Oracle en 
+      forma sencilla viendo un concepto teórico, luego algunos ejercicios 
+      resueltos y por último y lo más importante efectuar una serie 
+      de ejercicios. <strong><em> </em></strong> <br>
+</p><p><strong>Un listado ordenado de todos los cursos los puede visitar en <a href="http://www.tutorialesprogramacionya.com/" target="_blank">Tutoriales Ya</a></strong>.</p>      
+
+<div style="padding:15px">
+<script async="" src="Tutorial%20de%20Oracle%20Archivos/adsbygoogle.js"></script>
+<!-- adaptable3 -->
+<ins class="adsbygoogle uno" style="display: inline-block; width: 970px; height: 90px;" data-ad-client="ca-pub-4669394804436935" data-ad-slot="2203723962" data-adsbygoogle-status="done" data-overlap-observer-io="false"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:970px;height:90px;" width="970" height="90" frameborder="0"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </div>  
+
+    <div class="gradient"> 
+	<br>
+      <table style="border-collapse:collapse" "="" class="cuerpotabla" width="95.8%" bordercolor="#000000" border="1"><tbody><tr align="center"><td><b>Orden<br> del <br>concepto</b></td><td><b>Concepto</b></td><td><b>Detalle<br> del<br>concepto</b></td><td><b>Problema <br>resuelto</b></td><td><b>Problema<br>a<br>resolver</b></td></tr><tr height="30" align="center"><td>1</td><td align="left">Instalación de Oracle.</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=159&amp;punto=1"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td></td><td></td></tr><tr height="30" align="center"><td>2</td><td align="left">Crear tablas (create table - describe - all_tables - drop table)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=160&amp;punto=2"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=160&amp;punto=2"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=160&amp;punto=2"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>3</td><td align="left">Ingresar registros (insert into- select)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=161&amp;punto=3"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=161&amp;punto=3"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=161&amp;punto=3"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>4</td><td align="left">Tipos de datos</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=162&amp;punto=4"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=162&amp;punto=4"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=162&amp;punto=4"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>5</td><td align="left">Recuperar algunos campos (select)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=163&amp;punto=5"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=163&amp;punto=5"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=163&amp;punto=5"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>6</td><td align="left">Recuperar algunos registros (where)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=164&amp;punto=6"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=164&amp;punto=6"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=164&amp;punto=6"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>7</td><td align="left">Operadores relacionales</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=165&amp;punto=7"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=165&amp;punto=7"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=165&amp;punto=7"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>8</td><td align="left">Borrar registros (delete)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=166&amp;punto=8"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=166&amp;punto=8"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=166&amp;punto=8"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>9</td><td align="left">Actualizar registros (update)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=167&amp;punto=9"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=167&amp;punto=9"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=167&amp;punto=9"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>10</td><td align="left">Comentarios</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=168&amp;punto=10"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td></td><td></td></tr><tr height="30" align="center"><td>11</td><td align="left">Valores nulos (null)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=169&amp;punto=11"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=169&amp;punto=11"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=169&amp;punto=11"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>12</td><td align="left">Operadores relacionales (is null)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=170&amp;punto=12"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=170&amp;punto=12"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=170&amp;punto=12"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>13</td><td align="left">Clave primaria (primary key)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=171&amp;punto=13"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=171&amp;punto=13"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=171&amp;punto=13"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>14</td><td align="left">Vaciar la tabla (truncate table)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=172&amp;punto=14"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=172&amp;punto=14"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td></td></tr><tr height="30" align="center"><td>15</td><td align="left">Tipos de datos alfanuméricos</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=173&amp;punto=15"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=173&amp;punto=15"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=173&amp;punto=15"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>16</td><td align="left">Tipos de datos numéricos</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=174&amp;punto=16"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=174&amp;punto=16"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=174&amp;punto=16"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>17</td><td align="left">Ingresar algunos campos</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=175&amp;punto=17"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=175&amp;punto=17"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=175&amp;punto=17"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>18</td><td align="left">Valores por defecto (default)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=176&amp;punto=18"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=176&amp;punto=18"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=176&amp;punto=18"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>19</td><td align="left">Operadores aritméticos y de concatenación (columnas calculadas)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=177&amp;punto=19"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=177&amp;punto=19"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=177&amp;punto=19"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>20</td><td align="left">Alias (encabezados de columnas)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=178&amp;punto=20"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=178&amp;punto=20"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=178&amp;punto=20"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>21</td><td align="left">Funciones string</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=179&amp;punto=21"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=179&amp;punto=21"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td></td></tr><tr height="30" align="center"><td>22</td><td align="left">Funciones matemáticas.</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=180&amp;punto=22"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=180&amp;punto=22"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td></td></tr><tr height="30" align="center"><td>23</td><td align="left">Funciones de fechas y horas</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=181&amp;punto=23"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=181&amp;punto=23"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td></td></tr><tr height="30" align="center"><td>24</td><td align="left">Ordenar registros (order by)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=182&amp;punto=24"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=182&amp;punto=24"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=182&amp;punto=24"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr><tr height="30" align="center"><td>25</td><td align="left">Operadores lógicos (and - or - not)</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=0&amp;cod=183&amp;punto=25"><img src="Tutorial%20de%20Oracle%20Archivos/ejecucion.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/simulador/simulador.php?inicio=0&amp;cod=183&amp;punto=25"><img src="Tutorial%20de%20Oracle%20Archivos/lupa.gif" border="0"></a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/problemas/problema.php?inicio=0&amp;cod=183&amp;punto=25"><img src="Tutorial%20de%20Oracle%20Archivos/examen.gif" border="0"></a></td></tr></tbody></table><center><table class="paginacion"><tbody><tr><td></td><td style="background-color:#ffff00;border-radius:50%">1</td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/index.php?inicio=25">2</a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/index.php?inicio=50">3</a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/index.php?inicio=75">4</a></td><td><a href="https://www.tutorialesprogramacionya.com/oracleya/index.php?inicio=100">5</a></td></tr></tbody></table></center>
+
+</div>
+
+<div style="padding:15px">
+<script async="" src="Tutorial%20de%20Oracle%20Archivos/adsbygoogle.js"></script>
+<!-- adaptable3 -->
+<ins class="adsbygoogle uno" style="display: inline-block; width: 970px; height: 90px;" data-ad-client="ca-pub-4669394804436935" data-ad-slot="2203723962" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:970px;height:90px;" width="970" height="90" frameborder="0"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </div>  
+
+
+</div> <!-- close main content -->
+<div id="footer">
+
+<table border="0"><tbody><tr valign="top"><td><a href="http://www.tutorialesprogramacionya.com/htmlya" class="sitiosya">HTML Ya.</a></td> 
+  <td><a href="http://www.tutorialesprogramacionya.com/cssya" class="sitiosya">CSS Ya.</a></td>
+  <td><a href="http://www.tutorialesprogramacionya.com/javascriptya" class="sitiosya">JavaScript Ya.</a></td> 
+  <td><a href="http://www.tutorialesprogramacionya.com/dhtmlya" class="sitiosya">DHTML Ya.</a> </td>
+  <td><a href="http://www.tutorialesprogramacionya.com/phpya" class="sitiosya">PHP Ya.</a></td>
+  <td><a href="http://www.tutorialesprogramacionya.com/mysqlya" class="sitiosya">MySQL Ya.</a></td>
+  <td><a href="http://www.tutorialesprogramacionya.com/ajaxya" class="sitiosya">AJAX Ya.</a></td></tr>
+  <tr><td colspan="1"></td>
+  <td><a href="http://www.tutorialesprogramacionya.com/cssya/css3ya" class="sitiosya">CSS3 Ya.</a></td> 
+  <td colspan="2"></td>  
+  <td><a href="http://www.tutorialesprogramacionya.com/aspya" class="sitiosya">ASP Ya.</a></td>
+  <td><a href="http://www.tutorialesprogramacionya.com/sqlserverya" class="sitiosya">SQL Server Ya.</a></td>
+    <td></td></tr>
+  <tr><td colspan="4"></td>
+  <td><a href="http://www.tutorialesprogramacionya.com/aspnetya" class="sitiosya">ASP.Net Ya.</a></td> 
+  <td><a href="http://www.tutorialesprogramacionya.com/oracleya" class="sitiosya">Oracle Ya.</a></td>
+  <td></td></tr>
+  <tr><td colspan="4"></td>
+  <td><a href="http://www.tutorialesprogramacionya.com/pythonya" class="sitiosya">Python Ya.</a></td>
+  <td><a href="http://www.tutorialesprogramacionya.com/postgresqlya" class="sitiosya">PostgreSQL Ya.</a></td>
+  <td></td></tr>  
+  </tbody></table>
+
+</div> <!--close footer -->
+<b class="rbottom" style="background-color: rgb(255, 255, 255);"><b class="r4" style="background-color: rgb(131, 149, 203);"></b><b class="r3" style="background-color: rgb(131, 149, 203);"></b><b class="r2" style="background-color: rgb(131, 149, 203);"></b><b class="r1" style="background-color: rgb(131, 149, 203);"></b></b></div> <!-- close container -->
+
+
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" style="display: none !important;" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" frameborder="0"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_5837320005904" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body><iframe id="google_esf" name="google_esf" src="Tutorial%20de%20Oracle%20Archivos/zrt_lookup.html" style="display: none;" data-ad-client="ca-pub-4669394804436935"></iframe></html>
